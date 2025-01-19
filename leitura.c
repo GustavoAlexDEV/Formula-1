@@ -3,6 +3,10 @@
 #include <stdio.h>
 #include <string.h>
 
+void le_inteiros(int n,int m){
+    fscanf(ENTRADA,"%d %d",&n,&m);
+}
+
 void le_matrizes(char Pilotos[][],char Equipes[][],int n,int Endereco[]){
     int aux=0,i,j,c=0;
     char Saux1[32];
