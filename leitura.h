@@ -5,6 +5,6 @@
 #include <string.h>
 #include <math.h>
 
-void le_matrizes(FILE *ENTRADA,char Pilotos[][],char Equipes[][],int n,int Endereco[]);
+void le_estrutura(FILE *ENTRADA,char Pilotos[][],char Equipes[][],int n,int Endereco[]);
 
 #endif
