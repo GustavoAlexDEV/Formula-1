@@ -6,7 +6,6 @@
 #include "registros.h"
 int main(int argc,char *argv[]){
   int n,m;
-  char arqv[]="ENTRADA";
-  FILE* arq=fopen(arqv);
+  FILE* arq=fopen(argv[1]);
   return 0;
 }
