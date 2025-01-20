@@ -12,8 +12,8 @@ typedef struct{
         int pontos;
     }Estrutura_Pilotos;
     typedef struct{
-        char *nome;
-        int *colocacao;
+        char nome[32];
+        int colocacao[10];
         int pontos;
     }Estrutura_Equipes;
 
