@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void le_matrizes(FILE *ENTRADA,char Pilotos[][],char Equipes[][],int n,int Endereco[]){
+void le_estrutura(FILE *arq,*Pilotos,*Equipes,int n){
     int aux=0,i,j,c=0;
     char Saux1[32];
     for(i=0;i<n;i++){
