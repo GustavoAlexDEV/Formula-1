@@ -1,26 +1,26 @@
 #include "leitura.h"
 #include "operacao.h"
+#include "registros.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 void le_estrutura(FILE *arq,*Pilotos,*Equipes,int n){
     int aux=0,i,j,c=0;
     char Saux1[32];
-    char Saux2[32]
+    char Saux2[32];
     for(i=0;i<n;i++){
         fscanf(ENTRADA,"%s %s",Saux1,Saux2);
-        strcpy(Saux1,Pilotos[i].nome);
-        strcpy(Saux2,Pilotos[i].equipe);
+        strcpy(Pilotos[i].nome,Saux1);
+        strcpy(Pilotos[i].equipe,Saux2);
         for(j=0;j<c;j++){
             if(strcmp(Saux2,Equipes[j].nome)==0){
-                Endereco[i]=j;
                 aux=1;
                 break;
             }
         }
         if(aux==0){
-            strcpy(Equipes[c],Saux1);
-            Endereco[i]=c;
+            strcpy(Equipes[j].nome,Saux1);
             c++;
         }
         aux=0;
