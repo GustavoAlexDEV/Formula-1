@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void le_estrutura(FILE *arq,Estrutura_Pilotos *Pilotos,*Equipes,int n){
+void le_estrutura(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes,int n){
     int aux=0,i,j,c=0;
     char Saux1[32];
     char Saux2[32];
