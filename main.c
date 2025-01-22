@@ -12,21 +12,18 @@ int main(int argc,char *argv[]){
   char aux[32];
   Estrutura_Equipes* Equipes = malloc(sizeof(Estrutura_Equipes)*n);
   Estrutura_Pilotos* Pilotos = malloc(sizeof(Estrutura_Pilotos)*n);
-  FILE* arq=fopen(argv[1],"r");
-  fscanf(arq,"%d %d",&n,&m);
+  FILE* arq1=fopen(argv[1],"r");
+  FILE* arq2=fopen(argv[2],"w");
+  fscanf(arq1,"%d %d",&n,&m);
   //escaneia o numero de jogadores e de partidas
-  //tirei os asteriscos da frente de pilotos e equipes
-  le_estrutura(arq,Pilotos,Equipes,n);
-  fscanf(arq,"%s",aux);
-  printf("%s",aux);
-  le_partidas(arq,Pilotos,Equipes,tabela,n,m);
+  le_estrutura(arq1,Pilotos,Equipes,n);
+  //le ---
+  fscanf(arq1,"%s",aux);
+  //le n jogadores m vezes
+  le_partidas(arq1,Pilotos,Equipes,tabela,n,m);
+  //ordena os n jogadores
   calcula_resultado(Pilotos,Equipes,n);
-  for(int i=0;i<n;i++){
-    printf("%s %s %d \n",Pilotos[i].nome,Pilotos[i].equipe,Pilotos[i].pontos);  
-  }
-  printf("---\n");
-  for(int i=0;i<n/2;i++){
-    printf("%s %d \n",Equipes[i].nome,Equipes[i].pontos);  
-  }
+  //salva o resultado no arquivo endereçado em arq2
+  escrever_resultados(arq2,Pilotos,Equipes,n);
   return 0;
 }
