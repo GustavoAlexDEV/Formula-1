@@ -11,3 +11,4 @@
 - Execute o comando $ make;
 - Execute ./main ENTRADA SAIDA
 - PS.: Caso queira criar outro arquivo para ler e salvar os valores é só salvar o arquivo na pasta do projeto e colocar no formato nome.extensao na hora de executar a main;
+######### Projeto feito por Gustavo Ferraz Mota
