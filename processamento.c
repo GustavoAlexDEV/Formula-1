@@ -4,11 +4,14 @@
 #include <string.h>
 
 void le_partidas(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes,int tabela[],int n,int m){
-    int aux, i,j;
+    int i,j;
     char Saux[32];
     for(i=0;i<m;i++){
         for(j=0;j<n;j++){
             fscanf(arq,"%s",Saux);
+            if(strcmp(Saux,"---")==0){
+                j--;
+            }
             if(j<10){
                 for(int k=0;k<n;k++){
                     if(strcmp(Saux,Pilotos[k].nome)==0){
@@ -21,6 +24,7 @@ void le_partidas(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes
                                 Equipes[l].colocacao[j]++;
                             }
                         }
+                        break;
                     }
                 }
             }
@@ -34,9 +38,11 @@ void le_partidas(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes
                                 Equipes[l].colocacao[j]++;
                             }
                         }
+                        break;
                     }
                 }
             }
         }
     }
+    
 }

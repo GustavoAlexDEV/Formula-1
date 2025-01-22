@@ -19,7 +19,7 @@ void le_estrutura(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipe
             }
         }
         if(aux==0){
-            strcpy(Equipes[j].nome,Saux1);
+            strcpy(Equipes[j].nome,Saux2);
             c++;
         }
         aux=0;

@@ -18,7 +18,15 @@ int main(int argc,char *argv[]){
   //tirei os asteriscos da frente de pilotos e equipes
   le_estrutura(arq,Pilotos,Equipes,n);
   fscanf(arq,"%s",aux);
+  printf("%s",aux);
   le_partidas(arq,Pilotos,Equipes,tabela,n,m);
-  printf("%d",Pilotos[0].pontos);
+  calcula_resultado(Pilotos,Equipes,n);
+  for(int i=0;i<n;i++){
+    printf("%s %s %d \n",Pilotos[i].nome,Pilotos[i].equipe,Pilotos[i].pontos);  
+  }
+  printf("---\n");
+  for(int i=0;i<n/2;i++){
+    printf("%s %d \n",Equipes[i].nome,Equipes[i].pontos);  
+  }
   return 0;
 }

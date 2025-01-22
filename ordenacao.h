@@ -6,6 +6,6 @@
 #include <math.h>
 #include "registros.h"
 
-void calcula_resultado(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes,int n);
+void calcula_resultado(Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipes,int n);
 
 #endif
