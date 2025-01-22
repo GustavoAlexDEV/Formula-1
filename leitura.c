@@ -1,5 +1,4 @@
 #include "leitura.h"
-#include "operacao.h"
 #include "registros.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +9,7 @@ void le_estrutura(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes *Equipe
     char Saux1[32];
     char Saux2[32];
     for(i=0;i<n;i++){
-        fscanf(ENTRADA,"%s %s",Saux1,Saux2);
+        fscanf(arq,"%s %s",Saux1,Saux2);
         strcpy(Pilotos[i].nome,Saux1);
         strcpy(Pilotos[i].equipe,Saux2);
         for(j=0;j<c;j++){

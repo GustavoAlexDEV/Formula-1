@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
+#include "registros.h"
 
-void le_estrutura(FILE *arq,*Pilotos,*Equipes,int n);
+void le_estrutura(FILE *arq,Estrutura_Pilotos *Pilotos,Estrutura_Equipes* Equipes,int n);
 
 #endif
