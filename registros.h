@@ -11,7 +11,7 @@ typedef struct{
         int colocacao[40];
         int pontos;
     }Estrutura_Pilotos;
-    typedef struct{
+typedef struct{
         char nome[32];
         int colocacao[40];
         int pontos;
